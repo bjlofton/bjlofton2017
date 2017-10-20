@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brianna J. Lofton</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script>
+$(document).ready(function() {
+    var flag=true;
+
+    $('#view_container').click(function() {
+        //$('#resume').toggle('slow');
+        if (flag) {
+             $( "#resume" ).animate({left: "-=100px"}, 'slow');
+             flag = false;
+        }
+        $( '#view_options' ).toggle( 'slow' );
+    });
+
+    $( "#name" ).click(function() {
+        $('html, body').animate({
+            scrollTop: $("#main").offset().top
+        }, 1000);
+    });
+
+    $( "#about" ).click(function() {
+        $('html, body').animate({
+            scrollTop: $("#contact").offset().top
+        }, 1000);
+    });
+
+});
+</script>
+</head>
+<body>
+<div class="bg"></div><div id="overlay"></div>
+<div id="name">
+    <h1 class="line">______</h1>
+    <h1 class="myname">BRIANNA J. LOFTON</h1>
+    <p>Hi! I am a full-stack web developer currently based in Raleigh, NC.  I build fully functioning, interactive web sites and web applications.</p>
+</div>
+<div id="main" class="col-sm-12">
+    <!-- <div id="work" class="col-sm-12">
+        <div id="gluhc" class="col-sm-4 sites"><img src="images/gluhc.png"></div>
+        <div id="csc" class="col-sm-4 sites"><img src="images/csc.png"></div>
+        <div id="fam" class="col-sm-4 sites"><img src="images/code_library.jpg"></div>
+    </div><!-- end work-->
+
+   <!--  <div id="review" class="col-sm-12">
+
+    </div> -->
+
+    <div id="projects" class="col-sm-12">
+        <div class="col-sm-6"><img src="images/csc_full.png" style="width:80%;float:right;"></div>
+        <div class="col-sm-6">
+          <img src="images/gl_full.png" style="width:70%;float:left; clear:right;">
+          <img src="images/cupcake.jpg" style="width:70%; float:left; clear:left;">
+        </div>
+    </div>
+
+    <div id="about" class="col-sm-12">
+        <div id="img_container">
+            <img src="images/greenway.jpg" class="about_me" alt="the greenway">
+            <img src="images/me.jpg" class="about_me filter" alt="Photo of me">
+            <img src="images/atl.jpg" class="about_me" alt="ATL">
+            <img src="images/code_library.jpg" class="about_me" alt="hunt library">
+            <img src="images/cupcake.jpg" class="about_me" alt="cupcake">
+            <img src="images/battleship.jpg" class="about_me" alt="battleship">
+            <img src="images/talley.jpg" class="about_me" alt="talley student center">
+            <img src="images/snow_ny.jpg" class="about_me" alt="NYC">
+            <img src="images/flower.jpg" class="about_me" alt="flower">
+            <img src="images/donut_wall.jpg" class="about_me" alt="donut wall">
+            <img src="images/charlotte_park.jpg" class="about_me" alt="a park">
+        </div><!-- end img_container-->
+        <div id="dark"></div>
+        <div id="tagline">
+            <h1>See. Live. Learn. Dream. Create.</h1>
+        </div>
+    </div><!-- end about -->
+
+
+
+    <div id="read">
+        <div id="view_container">
+        <button id="resume"><h3>View Resume &nbsp;<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></h3></button>
+        </div><!-- view container -->
+        <div id="view_options" style="display:none;">
+            <a href="resume.docx" target="_blank"><img src="images/word.png" class="view_icon" alt="Microsoft Word"></a>
+            <a href="https://github.com/bjlofton" target="_blank"><img src="images/git.png" class="view_icon" alt="Git"></a>
+            <a href="https://www.linkedin.com/in/brianna-lofton-88617263/" target="_blank"><img src="images/linkedin.png" class="view_icon" alt="Linked In"></a>
+        </div><!-- end view_options -->
+    </div><!-- end work-->
+
+<button id="authorize-button" class="btn btn-primary hidden">Authorize</button>
+    <div id="contact">
+        <fieldset>
+            <legend>Contact Me</legend>
+        		<form id="contact_form">
+		            <p>Name *</p><input type="text" name="name" id="name-input" class="form_field" required>
+		            <p>Email *</p><input type="text" name="email" id="email-input" class="form_field" required>
+		            <p>Subject *</p><input type="text" name="subject" id="subject-input" class="form_field" required>
+		            <p>Message *</p><textarea name="message" cols="30" rows="6" id="description-input" class="form_field" required></textarea>
+		            <p><input type="submit" name="submit" value="Send"></p>
+		        </form>
+        </fieldset>
+        <h2 id="success"></h2>
+    </div><!-- end contact -->
+
+
+<div style="margin-bottom: 200px;"></div>
+</div><!-- end main -->
+<div id="status"></div>
+<script>
+    var winWidth  = 0;
+$(window).resize(function() {
+  winWidth = $(window).width();
+  $("#status").text(winWidth);
+});
+</script>
+<script>
+var skill = document.getElementsByClassName("skill");
+for(var i = 0; i < skill.length; i++) {
+  skill[i].onmouseover = function() {
+    this.getElementsByClassName("logo")[0].style.display = "none";
+    this.getElementsByClassName("lang")[0].style.display = "block";
+  };
+  skill[i].onmouseout = function() {
+    this.getElementsByClassName("logo")[0].style.display = "block";
+    this.getElementsByClassName("lang")[0].style.display = "none";
+  };
+}
+
+var URL = 'https://c7jkdmj5df.execute-api.us-east-1.amazonaws.com/prod/-contact'
+ 
+$('#contact_form').submit(function (event) {
+  event.preventDefault()
+ 
+  var data = {
+    name: $('#name-input').val(),
+    email: $('#email-input').val(),
+    subject: $('#subject-input').val(),
+    description: $('#description-input').val()
+  }
+ console.log(JSON.stringify(data));
+  $.ajax({
+    type: 'POST',
+    url: URL,
+    headers: {
+    },
+    dataType: 'json',
+    contentType: 'application/json',
+    data: JSON.stringify(data),
+    success: function () {
+      // clear form and show a success message
+      $('#success').html("Your message has been sent!");
+      $('#name-input').val("");
+      $('#email-input').val("");
+      $('#subject-input').val("");
+      $('#description-input').val("");
+    },
+    error: function () {
+      // show an error message
+    }
+  })
+})
+
+</script>
+</body>
+</html>
