@@ -41,7 +41,6 @@ nav a {color: white;}
     /*cursor: pointer;*/
 }
 #name {color: white;
-    opacity: 0.9;
     position: absolute;
     top: 25%;
     z-index: 1000;
@@ -49,86 +48,139 @@ nav a {color: white;}
     margin: 0 auto;
     padding: 0 10%;}
 .myname {font-size: 72px;}
-#name p {font-size: 18px; width: 40%; margin: 0 auto;}
-
-.col-sm-12 {padding: 0;}
 #main {position: absolute; top: 100%;}
 
-/*#work {margin: 100px 0;}
-.sites {text-align: center; height: 380px; overflow: hidden; padding: 40px;}
-#gluhc img {width: 100%;}
-#csc img {width: 100%; margin: 0 auto; display: block;}
-#fam img {width: 100%;}
-#review {margin: 50px 0 100px;}
-.rev {text-align: center; background-color: #f2f2f2;}*/
-
-#projects {margin: 100px auto;}
-#projects img {}
+.sec_row_skills {margin-top: 30px;}
+#skills {padding: 20px 10%; margin: 100px 0;}
+.skill {width: 33%;}
+#skills .logo>img {max-height: 200px; display: block; margin: 0 auto;}
+.mysql_img {padding-top: 18%;}
+.lang {display: none; height: 170px;
+  text-align: center;
+    padding: 20px;
+    border: solid 1px #ccc;
+    /*margin: 10px 5px 70px;*/
+}
+.lang h1 {margin: -40px 0 20px;}
+.lang span {background-color: white;}
+.lang p {font-size: 20px;}
+.lang2 {display: none; height: 100px; text-align: center;}
 
 #about {margin: 50px 0;
     width: 100%;
-    height: 300px;
+    height: 200px;
     overflow-y: hidden;
     overflow-x: hidden;}
-#img_container {width: 200%; margin-left: -300px;}
-.about_me {margin: 0; height: 300px; float: left;}
+#img_container {width: 200%; margin-left: -100px; }
+.about_me {margin: 0; height: 200px; float: left;}
 .filter {z-index: 5000; position: absolute;}
 
 #dark {background-color: rgba(0,0,0,0.5);
     width: 100%;
     position: absolute;
-    height: 300px;
+    height: 200px;
     overflow-x: hidden;}
 
 #tagline {color: white;
     margin-right: 50px;
     position: absolute;
-    right: 25px; margin-top: 100px; text-align: right;}
+    right: 50px; margin-top: 50px; text-align: right;}
 #tagline h1 {font-size: 50px;}
 
-#read {margin-top: 150px;}
-#view_container {width: 220px; margin: 0 auto;}
+#read {margin-top: 100px;}
+#view_container, #view_options {width:70%; margin: 0 auto; clear: both;}
 #resume {background-color: #2ec105;
     color: white;
     padding: 15px 20px;
     border: none;
-    float: left;
-    position: relative;
-    margin-bottom: 150px
+    margin: 50px auto;
+    width: 220px; 
+    display: block;
 }
 #resume h3 {margin-top: 10px;}
+#r_links {width: 205px; margin: 0 auto;}
+#projects {margin: 20px auto 80px; clear: both;}
+#projects h2 {background-color: #f2f2f2; padding: 20px; width: 30%; height: 120px; margin:10px;text-align:center;}
 .glyphicon-arrow-right {font-size: 16px;}
-#view_options {float: left;
-    padding: 15px;
-    /*margin-left: 50px; */
-    width: 300px;}
-.view_icon {height: 70px;}
+#view_options {
+    margin-bottom: 100px;
+}
+.view_icon {float: left; height: 50px;}
+.gluhc a {color: purple; font-family: cursive;}
+.csc a {font-family: "UniversRoman"; color: #c00; font-size:26px;}
+.fam_reu {}
 
-#contact {clear: both; padding: 20px 30%;}
+#contact {clear: both; padding: 20px 30%; margin: 50px 0;}
 #contact fieldset {}
 #contact p {margin: 20px 0 5px;}
 .form_field {width: 100%; line-height: 200%;}
+
+.tooltips {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltips .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+    font-size:14px; font-weight: normal;
+}
+
+.tooltips .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltips:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
 
 @media (max-width: 1200px) {
   #tagline {width: 70%; right: 0; margin-right: 20px; float: right;}
 }
 @media (max-width: 1110px) {
   .lang h1 {font-size: 30px; margin-top: -35px;}
-  #tagline {width: 60%; margin-top: 10%;}
+  #tagline {width: 60%; margin-top: 20px;}
 }
 @media (max-width:992px) {
   .line {display: none;}
   .lang p {font-size: 18px;}
   #contact {padding: 20px 20%;}
 }
-
+@media (max-width:900px) {
+    .lang h1 {font-size: 26px;}
+    #projects h2 {width: 28%;}
+}
 @media (max-width: 768px) {
   .myname {font-size: 60px;}
-  #name p {width: 80%;}
   #tagline {width: 10%; margin-top: 2px; left: 0; margin-left: 20px; text-align: left; float: left;}
   #tagline h1 {font-size: 30px;}
   #contact {padding: 20px 10%;}
-
-  #about, .about_me, #dark {height: 200px;}
-  #img_container {margin-left: -100px;}
-
+  /*.skill {margin: 0 auto;}*/
+  #skills .logo>img {max-height: 100px;}
+  .sec_row_skills {margin-top: 60px;}
+  .mysql_img {padding-top: 0; width: 100%;}
+  .lang {display: none;}
+  #r_links {margin-bottom:20px;}
+  #projects h2 {width:200px; margin:10px auto;}
+  .view_icon {margin-bottom: 30px;}
+}

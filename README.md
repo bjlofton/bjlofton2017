@@ -1,2 +1,2 @@
-# bjlofton2017
-portfolio revised
+# bjlofton.github.io
+personal website hosted by github
